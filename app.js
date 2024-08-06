@@ -173,4 +173,30 @@ function getDevObject3(name, ...skills) {
   
   console.log(getDevObject3('Maria', 'HTML', 'CSS', 'JavaScript', 'jQuery'))
   console.log("-------------")
+
+  ////////////////////////
+// Default Parameters //
+////////////////////////
+
+// Older method
+
+function setColor1(bicycle, color) {
+    // set color to 'purple' if not provided
+    bicycle.color = color || 'purple';
+    console.log(bicycle)
+  }
   
+  setColor1({}, 'blue');  // sets color to blue
+  setColor1({});  // sets color to purple by default
+  console.log("-------------")
+  
+  // Newer method
+  
+  function setColor2(bicycle, color = 'purple') {
+    bicycle.color = color;
+    console.log(bicycle);
+  }
+  
+  setColor2({}, 'red')
+  setColor2({})
+  console.log("-------------")
