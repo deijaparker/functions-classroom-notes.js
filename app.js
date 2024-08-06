@@ -200,3 +200,18 @@ function setColor1(bicycle, color) {
   setColor2({}, 'red')
   setColor2({})
   console.log("-------------")
+
+  ////////////////////////////////////////
+// Functions as Arguments (Callbacks) //
+////////////////////////////////////////
+
+const colors = ['red', 'green', 'blue'];
+
+colors.forEach(function(color) {
+  console.log(color);
+})
+
+colors.forEach((color) => {
+  console.log(color);
+})
+console.log("-------------")
