@@ -225,3 +225,16 @@ console.log("-------------")
 // (function() {
 //   console.log("I'm an IFE")
 // })();
+
+//////////////
+// Hoisting //
+//////////////
+
+console.log(name); // Output: undefined
+var name = 'bryan';
+console.log(name); // Output: 'bryan'
+
+// console.log(anotherName); // Output: ReferenceError
+let anotherName = 'jordan';
+console.log(anotherName); // Output: 'jordan'
+console.log("-------------")
