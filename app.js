@@ -215,3 +215,13 @@ colors.forEach((color) => {
   console.log(color);
 })
 console.log("-------------")
+
+//////////////////////////////////
+// Immediately Invoked Function //
+//////////////////////////////////
+
+// The code below won't work here on node for whatever reason. Works on the DevTools console though
+
+// (function() {
+//   console.log("I'm an IFE")
+// })();
