@@ -113,3 +113,47 @@ const planetHasWater = function(planet) {
   console.log(planetHasWater('eArtH')) // true
   console.log(planetHasWater('SATURN')) // false
   console.log("-------------")
+
+  //////////////////////////////
+// Parameters and Arguments //
+//////////////////////////////
+
+function numOfArgs() {
+    // Every function has access to a hidden variable called `arguments` which contains a list of all of the passed in arguments
+    console.log(arguments) 
+  }
+  
+  numOfArgs()
+  numOfArgs('bryan')
+  numOfArgs('bryan', 2, true)
+  console.log("-------------")
+  
+  function getDevObject1(name) {
+    let skills = [];
+  
+    for (let i = 1; i < arguments.length; i++) {
+      skills.push(arguments[i]);
+    }
+  
+    return {
+      devName: name,
+      jobSkills: skills
+    };
+  }
+  
+  function getDevObject2() {
+    let skills = [];
+  
+    for (let i = 1; i < arguments.length; i++) {
+      skills.push(arguments[i]);
+    }
+  
+    return {
+      devName: arguments[0],
+      jobSkills: skills
+    };
+  }
+  
+  console.log(getDevObject1('Maria', 'HTML', 'CSS', 'JavaScript', 'jQuery'))
+  console.log(getDevObject2('Jason', 'Node', 'Express', 'React', 'Machine Learning'))
+  console.log("-------------")
