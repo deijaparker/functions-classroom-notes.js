@@ -1,0 +1,45 @@
+/////////////////////////////////////////
+// ============ Functions ============ //
+/////////////////////////////////////////
+
+////////////////////////
+// Defining Functions //
+////////////////////////
+
+// Function Declaration
+
+funcDeclaration() // able to be called before declaring it, because func declarations allow us this ability due to hoisting
+// funcExpression() // will throw an error because variables cannot be hoisted the way func declarations can; func expressions cannot be called before declaring 
+
+function funcDeclaration() {
+  console.log('This is a function declaration')
+}
+
+// Function Expression
+
+const funcExpression = function() {
+  console.log('This is a function expression')
+}
+
+funcDeclaration()
+funcExpression()
+
+// Arrow Function
+
+const arrowFunc = () => {
+  console.log('This is a arrow function')
+}
+
+arrowFunc()
+
+
+function addTwoNums(x, y) { // x and y are parameters
+  return x + y;
+}
+
+console.log(addTwoNums(25, 100)); // example 1; 25 and 100 are arguments
+
+let answer = addTwoNums(10, 5); // example 2; 10 and 5 are arguments
+console.log(answer)
+
+console.log("-------------")
