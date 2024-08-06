@@ -157,3 +157,20 @@ function numOfArgs() {
   console.log(getDevObject1('Maria', 'HTML', 'CSS', 'JavaScript', 'jQuery'))
   console.log(getDevObject2('Jason', 'Node', 'Express', 'React', 'Machine Learning'))
   console.log("-------------")
+
+  /////////////////////
+// Rest Parameters //
+/////////////////////
+
+function getDevObject3(name, ...skills) {
+    console.log(skills)
+  
+    return {
+      devName: name,
+      jobSkills: skills
+    };
+  }
+  
+  console.log(getDevObject3('Maria', 'HTML', 'CSS', 'JavaScript', 'jQuery'))
+  console.log("-------------")
+  
