@@ -88,3 +88,28 @@ function computeArea(width, height) {
   
   console.log(computeArea(10, 5))
   console.log("-------------")
+
+  ////////////////
+// Exercise 3 //
+////////////////
+
+const planetHasWater = function(planet) {
+    // Method 1
+    if (planet.toLowerCase() === 'earth' || planet.toLowerCase() === 'mars') {
+      return true;
+    } else {
+      return false;
+    }
+  
+    // Method 2
+    // return planet.toLowerCase() === 'earth' || planet.toLowerCase() === 'mars';  
+  }
+  
+  console.log(planetHasWater('Earth')) // true
+  console.log(planetHasWater('Mars')) // true
+  console.log(planetHasWater('Jupiter')) // false
+  console.log(planetHasWater('earth')) // true
+  console.log(planetHasWater('MARS')) // true
+  console.log(planetHasWater('eArtH')) // true
+  console.log(planetHasWater('SATURN')) // false
+  console.log("-------------")
