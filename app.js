@@ -238,3 +238,17 @@ console.log(name); // Output: 'bryan'
 let anotherName = 'jordan';
 console.log(anotherName); // Output: 'jordan'
 console.log("-------------")
+
+///////////////////////
+// Pass by Reference //
+///////////////////////
+
+let myVar = { value: 20, type: 'Number' }
+
+function passBy(x) {
+  return x.value = x.value * 20;
+}
+
+console.log(myVar); // { value: 20, type: 'Number' }
+passBy(myVar); // the function-scoped variable x is set to the same memory location as myVar
+console.log(myVar);  // { value: 400, type: 'Number' }
