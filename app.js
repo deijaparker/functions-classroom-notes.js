@@ -43,3 +43,36 @@ let answer = addTwoNums(10, 5); // example 2; 10 and 5 are arguments
 console.log(answer)
 
 console.log("-------------")
+
+//////////////
+// Exercise //
+//////////////
+
+function areBothEven(n1, n2) {
+    return !(n1 % 2) && !(n2 % 2);
+  
+    /* 
+      This explains why we get true on line 77:
+  
+      !(n1 % 2) && !(n2 % 2);
+      !(2 % 2) && !(4 % 2);
+      !0 && !0
+      !false && !false
+      true && true
+      true
+    */
+    /*
+      This explains why we get false on line 78:
+  
+      !(n1 % 2) && !(n2 % 2);
+      !(2 % 2) && !(3 % 2);
+      !0 && !1
+      !false && !true
+      true && false
+      false
+    */ 
+  }
+  
+  console.log(areBothEven(2, 4))
+  console.log(areBothEven(2, 3))
+  console.log("-------------")
